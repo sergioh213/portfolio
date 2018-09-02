@@ -110,4 +110,8 @@ app.post("/", (req, res) => {
     });
 });
 
+app.get("*", (req, res) => {
+    res.redirect("/")
+})
+
 app.listen(process.env.PORT || 8080, () => console.log("listening on 8080 & Heroku"))

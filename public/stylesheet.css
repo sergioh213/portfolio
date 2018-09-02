@@ -25,8 +25,8 @@ body{
 }
 #header-box{
     position: absolute;
-    right: 100px;
-    top: 90px;
+    right: 120px;
+    top: 45px;
     text-align: center;
     z-index: 5;
 }
@@ -41,6 +41,15 @@ body{
     margin-bottom: 20px;
     font-weight: bold;
 }
+#media{
+    margin-bottom: 10px;
+}
+.media-icons{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    object-position: bottom;
+}
 #projects-box{
     text-align: center;
     display: inline-block;
@@ -53,6 +62,17 @@ body{
     cursor: pointer;
 }
 .projects-title:hover{
+    color: #bfbfbf;
+}
+#cv-download{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #404040;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+#cv-download:hover{
     color: #bfbfbf;
 }
 #project-list{
@@ -140,10 +160,23 @@ textarea{
     cursor: pointer;
     border-radius: none;
     font-size: 20px;
-    width: 100%;
+    width: 49%;
     background-color: rgba(255, 255, 255, 0.7);
+    display: inline;
 }
 #send-mail-button:hover{
+    background-color: rgba(255, 255, 255, 1);
+}
+#cancel-mail-button{
+    width: 130px;
+    cursor: pointer;
+    border-radius: none;
+    font-size: 20px;
+    width: 49%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline;
+}
+#cancel-mail-button:hover{
     background-color: rgba(255, 255, 255, 1);
 }
 #about{
@@ -165,8 +198,8 @@ textarea{
     color: white;
     font-size: 20px;
 }
-@media screen and (max-width: 1489px) and (min-width 1378px) {
-    #about-paragraph{
+@media screen and (min-width: 1378px) and (max-width: 1489px){
+    #about-paragraph {
         font-size: 16px;
     }
 }
@@ -200,13 +233,18 @@ textarea{
     display: inline-block;
 }
 .header{
+    position: relative;
     font-size: 40px;
     font-weight: 400;
     color: #7c304f;
-    background-color: blue;
+    /* background-color: blue; */
     margin-left: 55px;
     display: inline-block;
     margin-bottom: 8px;
+}
+#portfolio-header{
+    position: absolute;
+    left: 0;
 }
 #tech-grid{
     width: 100vw;
@@ -231,8 +269,6 @@ textarea{
 }
 #header-wrapper{
     width: 100vw;
-    /* background-color: #e0e0e0; */
-    background-color: green;
     padding-top: 30px;
 }
 #techs{
@@ -240,9 +276,10 @@ textarea{
     text-align: left;
 }
 section{
+    position: relative;
     text-align: right;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     position: relative;
     margin-top: -4px;
     background-color: #e0e0e0;
@@ -250,17 +287,6 @@ section{
 section:nth-last-of-type(odd){
     background-color: white;
 }
-/* .project-name{
-    font-size: 40px;
-    color: #7c304f;
-    position: relative;
-    margin-bottom: 8px;
-    text-align: right;
-    margin-right: 5vw;
-    display: inline-block;
-    float: right;
-    margin-top: 15px;
-} */
 .project-name{
     font-size: 60px;
     font-weight: 400;
@@ -270,13 +296,6 @@ section:nth-last-of-type(odd){
     margin-right: 5vw;
     display: inline-block;
     padding: none;
-}
-#coliving{
-    position: absolute;
-    right: 0;
-    margin-right: 40px;
-    top: -70px;
-    z-index: 4;
 }
 .more-button{
     position: relative;
@@ -313,13 +332,6 @@ section:nth-last-of-type(odd){
     font-weight: 400;
 }
 /* //////////////// CAROUSEL //////////////////// */
-/* .carousel-wrapper{
-    width: 100vw;
-    background-color: black;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-bottom: 30px;
-} */
 .kitties{
   position: relative;
   min-height: 600px;
@@ -334,7 +346,7 @@ section:nth-last-of-type(odd){
   top: 0px;
   left: 0px;
   height: 100%;
-  transform: translateX(100%);
+  transform: translateX(200%);
 }
 .kitty img{
   width: 100%;
@@ -370,4 +382,19 @@ section:nth-last-of-type(odd){
 }
 .dot.active{
   background-color: white;
+}
+/* //////////////// FOOTER //////////////////// */
+footer{
+    background-color: #7c304f;
+    cursor: pointer;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+}
+footer:hover{
+    background-color: #a85274;
+}
+.fas.fa-angle-double-up{
+    color: white;
+    font-size: 30px;
 }

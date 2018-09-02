@@ -6,20 +6,30 @@
     <div id="job-title">
         Full-Stack JavaScript Web Developer
     </div>
+    <div id="media">
+        <a href="https://www.linkedin.com/in/sergio-herrero/" target="_blank"><img class="media-icons" src="/content/media-icons/linkedin.png" alt=""></a>
+        <a href="https://github.com/sergioh213" target="_blank"><img class="media-icons" src="/content/media-icons/github.png" alt=""></a>
+        <a href="https://www.instagram.com/sergioh213/" target="_blank"><img class="media-icons" src="/content/media-icons/instagram.png" alt=""></a>
+        <a href="https://www.facebook.com/profile.php?id=100009479536858" target="_blank"><img class="media-icons" src="/content/media-icons/facebook.png" alt=""></a>
+    </div>
     <div id="projects-box">
         <div class="projects-title">
             Projects
         </div>
         <div id="project-list">
-            <a id="project-name" href="#header-wrapper">Automated Hostel</a>
+            <a id="project-name" href="#portfolio-title">Automated Hostel</a>
             <a id="project-name" href="#social-network">Social Network</a>
-            <a id="project-name" href="#image-board">Imageboard</a>
+            <a id="project-name" href="#petition"></a>
+            <a id="project-name" href="#image-board">Image board</a>
         </div>
         <div class="projects-title" id="contact-button" onclick="toggleShowContact()">
             Contact
         </div>
         <div class="projects-title" id="about-button" onclick="toggleShowAbout()">
             About me
+        </div>
+        <div class="projects-title" id="about-button">
+            <a id="cv-download" href="/content/Sergio Dev CV.pdf" download="Sergio Herrero (full-stack web developer) CV">My CV</a>
         </div>
     </div>
 </div>
@@ -47,6 +57,7 @@
         <textarea name="message" rows="8" cols="80" placeholder='Message' required></textarea>
         <input name="_csrf" type="hidden" value="{{ csrfToken }}">
         <div class="mail-input" id="mail-phone">
+            <button id="cancel-mail-button" type="button" onclick="toggleShowContact()">Cancel</button>
             <button id="send-mail-button" type="submit">Send</button>
         </div>
     </form>
@@ -61,6 +72,7 @@
     </div>
     <!-- help with text: Meike -->
     <div id="contact-button-wrapper">
+        <button id="toggle-contact" type="button" onclick="toggleShowAbout()">Cancel</button>
         <button id="toggle-contact" type="button" onclick="toggleShowContact()">Contact</button>
     </div>
 </div>
@@ -113,11 +125,9 @@
         <div id="grid-item">CSS3</div>
     </div>
 </section>
-<section id="header-wrapper">
-    <div class="header">PORTFOLIO</div>
-</section>
-<div id="portfolio-title">
-    <div class="project-name" id="coliving"><div class="more-button"><i class="fas fa-info"></i></div>Co-living</div>
+<section id="portfolio-title">
+    <div class="header" id="portfolio-header">PORTFOLIO</div>
+    <div class="project-name"><div class="more-button"><i class="fas fa-info"></i></div>Co-living</div>
     <div class="carousel-wrapper">
         <div class="kitties" id="kitties-1">
             <div class="project1kitty kitty onscreen"><img id="kit1" src="/content/co-living/Screen Shot 2018-08-28 at 11.43.37.png" alt="image1"></div>
@@ -150,7 +160,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 <section id="social-network">
     <div class="project-name"><div class="more-button"><i class="fas fa-info"></i></div>Social Network</div>
     <div class="carousel-wrapper">
@@ -172,18 +182,26 @@
         </div>
     </div>
 </section>
-<section id="image-board">
-    <div class="project-name"><div class="more-button"><i class="fas fa-info"></i></div>Social Network</div>
+<section id="petition">
+    <div class="project-name"><div class="more-button"><i class="fas fa-info"></i></div>Petition</div>
     <div class="carousel-wrapper">
         <div class="kitties" id="kitties-3">
-            <div class="project3kitty kitty onscreen"><img id="kit1" src="/content/social-network/Screen Shot 2018-08-28 at 17.20.16.png" alt="image1"></div>
-            <div class="project3kitty kitty"><img id="kit2" src="/content/social-network/Screen Shot 2018-08-28 at 17.21.14.png" alt="image2"></div>
-            <div class="project3kitty kitty"><img id="kit3" src="/content/social-network/Screen Shot 2018-08-28 at 17.29.50.png" alt="image3"></div>
-            <div class="project3kitty kitty"><img id="kit4" src="/content/social-network/Screen Shot 2018-08-28 at 17.30.05.png" alt="image4"></div>
-            <div class="project3kitty kitty"><img id="kit4" src="/content/social-network/Screen Shot 2018-08-28 at 17.31.33.png" alt="image5"></div>
-            <div class="project3kitty kitty"><img id="kit4" src="/content/social-network/Screen Shot 2018-08-28 at 17.33.25.png" alt="image6"></div>
+            <div class="project3kitty kitty onscreen"><img id="kit1" src="/content/petition/Screen Shot 2018-09-02 at 10.29.46.png" alt="image1"></div>
+            <div class="project3kitty kitty"><img id="kit2" src="/content/petition/Screen Shot 2018-09-02 at 10.30.37.png" alt="image2"></div>
+            <div class="project3kitty kitty"><img id="kit3" src="/content/petition/Screen Shot 2018-09-02 at 10.31.28.png" alt="image3"></div>
+            <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.31.57.png" alt="image4"></div>
+            <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.32.29.png" alt="image5"></div>
+            <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.33.22.png" alt="image6"></div>
+            <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.33.40.png" alt="image7"></div>
+            <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.34.04.png" alt="image8"></div>
+            <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.34.23.png" alt="image9"></div>
+            <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.34.43.png" alt="image10"></div>
             <div id="dots">
                 <div class="project3dot dot active"></div>
+                <div class="project3dot dot"></div>
+                <div class="project3dot dot"></div>
+                <div class="project3dot dot"></div>
+                <div class="project3dot dot"></div>
                 <div class="project3dot dot"></div>
                 <div class="project3dot dot"></div>
                 <div class="project3dot dot"></div>
@@ -193,3 +211,31 @@
         </div>
     </div>
 </section>
+<section id="image-board">
+    <div class="project-name"><div class="more-button"><i class="fas fa-info"></i></div>Image Board</div>
+    <!-- <div class="carousel-wrapper"> -->
+        <div class="kitties" id="kitties-4">
+            <div class="project4kitty kitty onscreen"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.36.32.png" alt="image1"></div>
+            <div class="project4kitty kitty"><img id="kit1" src="/content/image-board/Screen Shot 2018-09-02 at 18.18.06.png" alt="image2"></div>
+            <div class="project4kitty kitty"><img id="kit3" src="/content/image-board/Screen Shot 2018-09-02 at 16.28.44.png" alt="image3"></div>
+            <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.29.05.png" alt="image4"></div>
+            <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.29.24.png" alt="image5"></div>
+            <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.30.08.png" alt="image6"></div>
+            <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.30.24.png" alt="image7"></div>
+            <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.37.17.png" alt="image8"></div>
+            <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.37.31.png" alt="image9"></div>
+            <div id="dots">
+                <div class="project4dot dot active"></div>
+                <div class="project4dot dot"></div>
+                <div class="project4dot dot"></div>
+                <div class="project4dot dot"></div>
+                <div class="project4dot dot"></div>
+                <div class="project4dot dot"></div>
+                <div class="project4dot dot"></div>
+                <div class="project4dot dot"></div>
+                <div class="project4dot dot"></div>
+            </div>
+        </div>
+    <!-- </div> -->
+</section>
+<footer onclick="scroll_top()"><i class="fas fa-angle-double-up"></i></footer>
