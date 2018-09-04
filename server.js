@@ -8,6 +8,7 @@ const cookieSession = require("cookie-session");
 const bc = require("./db/bcrypt.js")
 const bcrypt = require('./db/bcrypt')
 const csurf = require('csurf')
+const favicon = require('serve-favicon')
 
 var session = require('express-session')
 var Store = require('connect-redis')(session);
@@ -18,6 +19,8 @@ if (process.env.NODE_ENV == 'production') {
 } else {
     secrets = require('./secrets.json')
 }
+console.log(__dirname + "/public/content/favicon.ico");
+app.use(favicon(__dirname + "/public/content/favicon.ico"))
 
 app.use(session({
     store: new Store({
@@ -118,9 +121,9 @@ app.post("/mail", (req, res) => {
     });
 });
 
-app.get("*", (req, res) => {
-    console.log("inside * route");
-    res.redirect("/")
-})
+// app.get("*", (req, res) => {
+//     console.log("inside * route");
+//     res.redirect("/")
+// })
 
 app.listen(process.env.PORT || 8080, () => console.log("listening on 8080 & Heroku"))
