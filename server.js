@@ -52,23 +52,25 @@ app.use(
 app.use(cookieParser());
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: false}))
-app.use(csurf())
-app.use(function(req, res, next) {
-   res.locals.csrfToken = req.csrfToken();
-   next();
-});
+app.use(bodyParser.json())
+// app.use(csurf())
+// app.use(function(req, res, next) {
+//    res.locals.csrfToken = req.csrfToken();
+//    next();
+// });
 app.engine("handlebars", hbs.engine)
 
 app.set("view engine", "handlebars")
 
 app.get("/", (req, res) => {
-    res.render("petition", {
+    console.log("rendering get /");
+    res.render("content", {
         layout: "main"
     });
 })
 
-app.post("/", (req, res) => {
-    console.log(req.body);
+app.post("/mail", (req, res) => {
+    console.log("yoyoo wtf is going onnnn", req.body);
     const output = `
         <p>New message from your portfolio website:</p>
         <ul>
@@ -106,12 +108,15 @@ app.post("/", (req, res) => {
         console.log("Message sent: %s", info.messageId);
         console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
-        res.render("petition", { message: "Your email was successfully sent!" });
+        res.json({
+            success: true
+        });
     });
 });
 
-app.get("*", (req, res) => {
-    res.redirect("/")
-})
+// app.get("*", (req, res) => {
+//     console.log("inside * route");
+//     res.redirect("/")
+// })
 
 app.listen(process.env.PORT || 8080, () => console.log("listening on 8080 & Heroku"))

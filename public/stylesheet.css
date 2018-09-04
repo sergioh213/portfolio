@@ -106,6 +106,29 @@ body{
     object-fit: cover;
     object-position: bottom;
 }
+#message-modal{
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    height: 719px;
+    object-fit: cover;
+    object-position: bottom;
+    background-color: rgb(0, 0, 0, 0.5);
+    display: none;
+}
+#message{
+    position: relative;
+    color: green;
+    top: 50%;
+    padding-left: 40px;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    /* margin: 0 auto; */
+    background-color: rgb(0, 0, 0, 0.5);
+    font-size: 24px;
+    font-weight: bold;
+}
 #mail{
     position: absolute;
     z-index: 3;
@@ -254,10 +277,26 @@ textarea{
     display: grid;
     grid-template-columns: repeat(20, 5%);
 }
-#grid-item{
+@media screen and (max-width: 1100px){
+    #tech-grid {
+        grid-template-columns: repeat(10, 10%);
+        row-gap: 20px;
+    }
+}
+@media screen and (min-width: 1265px) and (max-width: 1440px) {
+    .grid-item {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 1100px) and (max-width: 1265px) {
+    .grid-item {
+        font-size: 12px;
+    }
+}
+.grid-item{
     text-align: center;
 }
-#grid-item img{
+.grid-item img{
     position: relative;
     width: 100%;
     height: 50px;
@@ -266,6 +305,9 @@ textarea{
 }
 #amazon{
     font-size: 10px;
+}
+#postgresql{
+    font-size: 12px;
 }
 #header-wrapper{
     width: 100vw;
@@ -279,7 +321,7 @@ section{
     position: relative;
     text-align: right;
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     position: relative;
     margin-top: -4px;
     background-color: #e0e0e0;
@@ -297,6 +339,20 @@ section:nth-last-of-type(odd){
     display: inline-block;
     padding: none;
 }
+.app-link{
+    font-size: 60px;
+    font-weight: 400;
+    color: black;
+    position: relative;
+    margin-bottom: 8px;
+    display: inline-block;
+    padding: 0;
+    text-decoration: none;
+}
+.app-link:hover{
+    color: white;
+    transform: scale(1.2);
+}
 .more-button{
     position: relative;
     top: 16px;
@@ -309,6 +365,23 @@ section:nth-last-of-type(odd){
     z-index: 1;
     text-align: center;
     cursor: pointer;
+}
+.more-button:hover{
+    background-color: #474747;
+    transform: scale(1.2);
+}
+.fas.fa-times{
+    display: none;
+    position: relative;
+    font-size: 45px;
+    color: rgb(0, 0, 0, 0.8);
+    bottom: 3px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+.fas.fa-times:hover{
+    color: #474747;
+    /* transform: scale(1.2); */
 }
 .fas.fa-info{
     position: relative;
@@ -331,6 +404,48 @@ section:nth-last-of-type(odd){
     font-size: 70px;
     font-weight: 400;
 }
+.project-info{
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    width: 70%;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    display: none;
+}
+.p-block{
+    margin-top: 10px;
+}
+.features-header{
+    font-weight: bold;
+    display: inline;
+}
+.features-list{
+    display: inline;
+    position: relative;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.deploy-down, .deploy-up{
+    /* display: none; */
+    position: relative;
+    font-size: 45px;
+    color: rgb(0, 0, 0, 0.8);
+    bottom: 3px;
+    cursor: pointer;
+    margin-right: 30px;
+    display: none;
+}
+.deploy-down:hover, .deploy-up:hover{
+    color: #474747;
+    transform: scale(1.2);
+}
+.deploy-up{
+    display: none;
+}
 /* //////////////// CAROUSEL //////////////////// */
 .kitties{
   position: relative;
@@ -339,7 +454,6 @@ section:nth-last-of-type(odd){
   overflow: hidden;
   transform: translateX(-50%);
   left: 50%;
-  /* margin-bottom: 30px; */
 }
 .kitty{
   position: absolute;
@@ -353,6 +467,7 @@ section:nth-last-of-type(odd){
   height: 100%;
   object-fit: contain;
   object-position: center;
+  /* background-color: #4f4f4f; */
 }
 #dots{
   position: absolute;
@@ -370,6 +485,9 @@ section:nth-last-of-type(odd){
   margin: 3px;
   cursor: pointer;
 }
+#dark-dot{
+    border: 3px #4f4f4f solid;
+}
 .kitty.onscreen{
   transform: translateX(0);
   transition-property: transform;
@@ -383,6 +501,9 @@ section:nth-last-of-type(odd){
 .dot.active{
   background-color: white;
 }
+#dark-dot.active{
+  background-color: #4f4f4f;
+}
 /* //////////////// FOOTER //////////////////// */
 footer{
     background-color: #7c304f;
@@ -394,7 +515,7 @@ footer{
 footer:hover{
     background-color: #a85274;
 }
-.fas.fa-angle-double-up{
+#footer-arrow{
     color: white;
     font-size: 30px;
 }
