@@ -13,7 +13,11 @@ var session = require('express-session')
 var Store = require('connect-redis')(session);
 
 const nodemailer = require('nodemailer');
-const secrets = require('./secrets.json');
+if (process.env.NODE_ENV == 'production') {
+    secrets = process.env
+} else {
+    secrets = require('./secrets.json')
+}
 
 app.use(session({
     store: new Store({
