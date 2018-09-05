@@ -121,9 +121,9 @@ app.post("/mail", (req, res) => {
     });
 });
 
-// app.get("*", (req, res) => {
-//     console.log("inside * route");
-//     res.redirect("/")
-// })
+app.get("*", (req, res) => {
+    console.log("inside * route");
+    res.status(404).end()
+})
 
 app.listen(process.env.PORT || 8080, () => console.log("listening on 8080 & Heroku"))

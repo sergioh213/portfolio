@@ -66,6 +66,8 @@ submitButton.addEventListener("click", function(e){
         phone: document.querySelector("input[name=phone]").value,
         message: document.querySelector("textarea[name=message]").value
     }).then(function(resp){
+        var mailModal = document.getElementById("mail")
+        mailModal.style.display = "none"
         if (resp.data.success) {
             resp.data.message
             var messageModal = document.getElementById('message-modal')
@@ -73,6 +75,8 @@ submitButton.addEventListener("click", function(e){
             setTimeout(function(){
                 messageModal.style.display = "none"
             }, 2000)
+        } else {
+            console.log("Something went wrong with the email");
         }
     })
 })

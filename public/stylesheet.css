@@ -5,9 +5,14 @@
 }
 body{
     margin: 0;
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
     background-color: #e0e0e0;
+}
+#partial{
+    position: relative;
+    overflow-x: hidden;
+    /* position: fixed; */
 }
 /* //////////////// HEAD //////////////////// */
 #header-pane{
@@ -29,15 +34,19 @@ body{
     top: 45px;
     text-align: center;
     z-index: 5;
+    display: block;
+    /* background-color: green; */
 }
 #name{
-    color: #3F88C5;
+    /* color: #3F88C5; */
+    color: #7c304f;
     font-size: 50px;
     font-weight: 500;
     margin-bottom: 10px;
 }
 #job-title{
-    color: #3F88C5;
+    /* color: #3F88C5; */
+    color: #7c304f;
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -62,7 +71,7 @@ body{
     cursor: pointer;
 }
 .projects-title:hover{
-    color: #bfbfbf;
+    color: slategrey;
 }
 #cv-download{
     text-decoration: none;
@@ -73,11 +82,12 @@ body{
     cursor: pointer;
 }
 #cv-download:hover{
-    color: #bfbfbf;
+    color: slategrey;
 }
 #project-list{
     text-align: center;
-    color: #3F88C5;
+    /* color: #3F88C5; */
+    color: #7c304f;
     margin-bottom: 5px;
     cursor: pointer;
     font-weight: bold;
@@ -85,13 +95,15 @@ body{
 #project-list a{
     text-decoration: none;
     display: block;
-    color: #3F88C5;
+    /* color: #3F88C5; */
+    color: #7c304f;
 }
 #project-name{
     font-weight: bold;
 }
 #project-name:hover{
-    color: #69ade5;
+    /* color: #69ade5; */
+    color: #a3476d;
 }
 /* //////////////// PANE //////////////////// */
 #pane1-style-div{
@@ -155,6 +167,11 @@ body{
     padding-bottom: 0px;
     top: 9px;
 }
+@media screen and (min-width: 1432px) and (max-width: 1461px){
+    #contact-form-title{
+        font-size: 40px;
+    }
+}
 #mail input{
     background-color: rgb(0, 0, 0, 0.7);
     padding-left: 5px;
@@ -202,6 +219,33 @@ textarea{
 #cancel-mail-button:hover{
     background-color: rgba(255, 255, 255, 1);
 }
+@media screen and (min-width: 1400px) and (max-width: 1432px){
+    #contact-form-title{
+        font-size: 35px;
+    }
+    #send-mail-button{
+        width: 90px;
+        font-size: 16px;
+    }
+    #cancel-mail-button{
+        width: 90px;
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 1378px) and (max-width: 1400px){
+    #contact-form-title{
+        font-size: 30px;
+        top: 7px;
+    }
+    #send-mail-button{
+        width: 90px;
+        font-size: 16px;
+    }
+    #cancel-mail-button{
+        width: 90px;
+        font-size: 16px;
+    }
+}
 #about{
     position: absolute;
     z-index: 3;
@@ -241,6 +285,12 @@ textarea{
 #toggle-contact:hover{
     background-color: rgba(255, 255, 255, 1);
 }
+@media screen and (min-width: 1378px) and (max-width: 1420px){
+    #toggle-contact{
+        width: 90px;
+        font-size: 18px;
+    }
+}
 #me-image{
     position: absolute;
     right: 0;
@@ -270,31 +320,34 @@ textarea{
     left: 0;
 }
 #tech-grid{
-    width: 100vw;
+    width: 100%;
     z-index: 2;
-    position: relative;
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(20, 5%);
 }
 @media screen and (max-width: 1100px){
     #tech-grid {
-        grid-template-columns: repeat(10, 10%);
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
         row-gap: 20px;
+    }
+    .grid-name {
+        font-size: 14px;
     }
 }
 @media screen and (min-width: 1265px) and (max-width: 1440px) {
-    .grid-item {
+    .grid-name {
         font-size: 14px;
     }
 }
 @media screen and (min-width: 1100px) and (max-width: 1265px) {
-    .grid-item {
+    .grid-name {
         font-size: 12px;
     }
 }
 .grid-item{
     text-align: center;
+    grid-template-rows: auto auto;
 }
 .grid-item img{
     position: relative;
@@ -302,6 +355,11 @@ textarea{
     height: 50px;
     object-fit: contain;
     object-position: center;
+    grid-row: 1;
+}
+.grid-name{
+    text-align: center;
+    grid-row: 2;
 }
 #amazon{
     font-size: 10px;
@@ -316,6 +374,8 @@ textarea{
 #techs{
     background-color: white;
     text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 section{
     position: relative;
@@ -454,6 +514,7 @@ section:nth-last-of-type(odd){
   overflow: hidden;
   transform: translateX(-50%);
   left: 50%;
+  /* display: none; */
 }
 .kitty{
   position: absolute;

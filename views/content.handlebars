@@ -1,323 +1,412 @@
-<div id="header-pane"></div>
-<div id="header-box">
-    <div id="name">
-        Sergio Herrero
-    </div>
-    <div id="job-title">
-        Full-Stack JavaScript Web Developer
-    </div>
-    <div id="media">
-        <a href="https://www.linkedin.com/in/sergio-herrero/" target="_blank"><img class="media-icons" src="/content/media-icons/linkedin.png" alt=""></a>
-        <a href="https://github.com/sergioh213" target="_blank"><img class="media-icons" src="/content/media-icons/github.png" alt=""></a>
-        <a href="https://www.instagram.com/sergioh213/" target="_blank"><img class="media-icons" src="/content/media-icons/instagram.png" alt=""></a>
-        <a href="https://www.facebook.com/profile.php?id=100009479536858" target="_blank"><img class="media-icons" src="/content/media-icons/facebook.png" alt=""></a>
-    </div>
-    <div id="projects-box">
-        <div class="projects-title">
-            Projects
+<div id="partial">
+    <div id="header-pane"></div>
+    <div id="header-box">
+        <div id="name">
+            Sergio Herrero
         </div>
-        <div id="project-list">
-            <a id="project-name" href="#portfolio-title">Automated Hostel</a>
-            <a id="project-name" href="#social-network">Social Network</a>
-            <a id="project-name" href="#petition"></a>
-            <a id="project-name" href="#image-board">Image board</a>
+        <div id="job-title">
+            Full-Stack JavaScript Web Developer
         </div>
-        <div class="projects-title" id="contact-button" onclick="toggleShowContact()">
-            Contact
+        <div id="media">
+            <a href="https://www.linkedin.com/in/sergio-herrero/" target="_blank"><img class="media-icons" src="/content/media-icons/linkedin.png" alt=""></a>
+            <a href="https://github.com/sergioh213" target="_blank"><img class="media-icons" src="/content/media-icons/github.png" alt=""></a>
+            <a href="https://www.instagram.com/sergioh213/" target="_blank"><img class="media-icons" src="/content/media-icons/instagram.png" alt=""></a>
+            <a href="https://www.facebook.com/profile.php?id=100009479536858" target="_blank"><img class="media-icons" src="/content/media-icons/facebook.png" alt=""></a>
         </div>
-        <div class="projects-title" id="about-button" onclick="toggleShowAbout()">
-            About me
-        </div>
-        <div class="projects-title" id="about-button">
-            <a id="cv-download" href="/content/Sergio Dev CV.pdf" download="Sergio Herrero (full-stack web developer) CV">My CV</a>
-        </div>
-    </div>
-</div>
-
-<div id="berlin-sign">Berlin</div>
-<img id="pane1-image" src="/content/background-pictures/berlin-skyline.jpg" alt=""/>
-<div id="message-modal"><div id="message">Your message was sent successfully</div></div>
-<div id="mail">
-    <form id="mail-form" method="post" action="/mail">
-        <div id="contact-form-title">
-            Contact Form
-        </div>
-        <div class="mail-input" id="mail-name">
-            <input type="text" name="name" placeholder="Name">
-        </div>
-        <div class="mail-input" id="mail-company">
-            <input type="text" name="company" placeholder="Company">
-        </div>
-        <div class="mail-input" id="mail-email">
-            <input type="email" name="email" placeholder='Email' required>
-        </div>
-        <div class="mail-input" id="mail-phone">
-            <input type="text" name="phone" placeholder="Phone">
-        </div>
-        <textarea name="message" rows="8" cols="80" placeholder='Message' required></textarea>
-        <input name="_csrf" type="hidden" value="{{ csrfToken }}">
-        <div class="mail-input" id="mail-phone">
-            <button id="cancel-mail-button" type="button" onclick="toggleShowContact()">Cancel</button>
-            <button id="send-mail-button" type="submit">Send</button>
-        </div>
-    </form>
-</div>
-<div id="about">
-    <div id="about-paragraph">
-        Hi there! I'm a young developer with a passion for music and tech.<br><br>
-        In summer 2018, I quit my job and joined a JavaScript full-stack web development bootcamp in order to get into the tech industry.<br><br>
-        I'm self-taught in fields like CAD, 3D printing, quick hardware prototyping and Python, and am excited to learn just about anything to satisfy my curiosity.<br><br>
-        I have a business spirit (have written several business plans in my life) and I think I can be a trustworthy asset for any company.<br><br>
-        I would like to join a company with a meaningful product, with the personal goal of becoming a vital piece for your success.
-    </div>
-    <!-- help with text: Meike -->
-    <div id="contact-button-wrapper">
-        <button id="toggle-contact" type="button" onclick="toggleShowAbout()">Cancel</button>
-        <button id="toggle-contact" type="button" onclick="toggleShowContact()">Contact</button>
-    </div>
-</div>
-<img id="me-image" src="/content/background-pictures/me-cropped.jpeg" alt=""/>
-
-<section id="techs">
-    <div class="header">TECHNOLOGIES</div>
-    <div id="tech-grid">
-        <div class="grid-item"><img src="/content/tech-icons/js.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/react.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/redux.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/socket-io.svg" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/vue.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/postgresql.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/node.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/aws.webp" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/jquery.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/handlebars.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/express.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/git.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/github.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/heroku.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/atom.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/python.ico" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/npm.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/postman.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/html.png" alt=""></div>
-        <div class="grid-item"><img src="/content/tech-icons/css.png" alt=""></div>
-    </div>
-    <div id="tech-grid">
-        <div class="grid-item">JavaScript</div>
-        <div class="grid-item">React.js</div>
-        <div class="grid-item">Redux.js</div>
-        <div class="grid-item">Socket-io</div>
-        <div class="grid-item">Vue.js</div>
-        <div class="grid-item" id="postgresql">PostgreSQL</div>
-        <div class="grid-item">Node.js</div>
-        <div class="grid-item">AWS<br><div id="amazon">Amazon Web Services</div></div>
-        <div class="grid-item">jQuery</div>
-        <div class="grid-item">Handebars</div>
-        <div class="grid-item">Express</div>
-        <div class="grid-item">Git</div>
-        <div class="grid-item">GitHub</div>
-        <div class="grid-item">Heroku</div>
-        <div class="grid-item">Atom Editor</div>
-        <div class="grid-item">Python.js<br><div id="amazon">:)</div></div>
-        <div class="grid-item">npm</div>
-        <div class="grid-item">Postman</div>
-        <div class="grid-item">HTML5</div>
-        <div class="grid-item">CSS3</div>
-    </div>
-</section>
-<section id="portfolio-title">
-    <div class="header" id="portfolio-header">PORTFOLIO</div>
-    <div class="project-name">
-        <i id="co-living-up" class="fas fa-angle-up deploy-up"></i>
-        <i id="co-living-down" class="fas fa-angle-down deploy-down"></i>
-        <i id="co-living-x" class="fas fa-times"></i>
-        <div id="co-living-i" class="more-button"><i class="fas fa-info"></i></div>
-        Co-living
-    </div>
-    <div id="co-living-p" class="project-info">
-        Automatic hostel managment built with React and Redux<br>
-        <div class="p-block">
-            <div class="features-header">Features include:</div>
-            <div class="features-list">
-                Login/Registration | chose hostel/location | Make/manage reservations | Create/attend events | Hostel global chat | Edit profile | Upload profile picture | Self-check in/out | See other guests | Other people’s profiles | Request/accept/delete connections
+        <div id="projects-box">
+            <div class="projects-title">
+                Projects
             </div>
-        </div>
-        <br>
-        <div>
-            <div class="features-header">Technologies:</div>
-            <div class="features-list">
-                Javascript ES6 | React | Redux | Socket.io| Node.js | Express.js | PostgreSQL | HTML/CSS
+            <div id="project-list">
+                <a id="project-name" href="#portfolio-title">Automated Hostel</a>
+                <a id="project-name" href="#social-network">Social Network</a>
+                <a id="project-name" href="#petition"></a>
+                <a id="project-name" href="#image-board">Image board</a>
+            </div>
+            <div class="projects-title" id="contact-button" onclick="toggleShowContact()">
+                Contact
+            </div>
+            <div class="projects-title" id="about-button" onclick="toggleShowAbout()">
+                About me
+            </div>
+            <div class="projects-title" id="about-button">
+                <a id="cv-download" href="/content/Sergio Dev CV.pdf" download="Sergio Herrero (full-stack web developer) CV">My CV</a>
             </div>
         </div>
     </div>
-    <div class="carousel-wrapper">
-        <div class="kitties" id="kitties-1">
-            <div class="project1kitty kitty onscreen"><img id="kit1" src="/content/co-living/Screen Shot 2018-08-28 at 11.43.37.png" alt="image1"></div>
-            <div class="project1kitty kitty"><img id="kit2" src="/content/co-living/Screen Shot 2018-08-28 at 11.44.04.png" alt="image2"></div>
-            <div class="project1kitty kitty"><img id="kit3" src="/content/co-living/Screen Shot 2018-08-28 at 11.45.30.png" alt="image3"></div>
-            <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 11.45.54.png" alt="image4"></div>
-            <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 11.46.20.png" alt="image5"></div>
-            <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-14 at 16.01.06.png" alt="image6"></div>
-            <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 11.47.44.png" alt="image7"></div>
-            <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 11.48.19.png" alt="image8"></div>
-            <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 11.49.58.png" alt="image9"></div>
-            <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 11.50.13.png" alt="image10"></div>
-            <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 11.50.28.png" alt="image11"></div>
-            <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 12.01.35.png" alt="image12"></div>
-            <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 12.02.50.png" alt="image13"></div>
+
+    <div id="berlin-sign">Berlin</div>
+    <img id="pane1-image" src="/content/background-pictures/berlin-skyline.jpg" alt=""/>
+    <div id="message-modal"><div id="message">Your message was sent successfully</div></div>
+    <div id="mail">
+        <form id="mail-form" method="post" action="/mail">
+            <div id="contact-form-title">
+                Contact Form
+            </div>
+            <div class="mail-input" id="mail-name">
+                <input type="text" name="name" placeholder="Name">
+            </div>
+            <div class="mail-input" id="mail-company">
+                <input type="text" name="company" placeholder="Company">
+            </div>
+            <div class="mail-input" id="mail-email">
+                <input type="email" name="email" placeholder='Email' required>
+            </div>
+            <div class="mail-input" id="mail-phone">
+                <input type="text" name="phone" placeholder="Phone">
+            </div>
+            <textarea name="message" rows="8" cols="80" placeholder='Message' required></textarea>
+            <input name="_csrf" type="hidden" value="{{ csrfToken }}">
+            <div class="mail-input" id="mail-phone">
+                <button id="cancel-mail-button" type="button" onclick="toggleShowContact()">Cancel</button>
+                <button id="send-mail-button" type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+    <div id="about">
+        <div id="about-paragraph">
+            Hi there! I'm a young developer with a passion for music and tech.<br><br>
+            In summer 2018, I quit my job and joined a JavaScript full-stack web development bootcamp in order to get into the tech industry.<br><br>
+            I'm self-taught in fields like CAD, 3D printing, quick hardware prototyping and Python, and am excited to learn just about anything to satisfy my curiosity.<br><br>
+            I have a business spirit (have written several business plans in my life) and I think I can be a trustworthy asset for any company.<br><br>
+            I would like to join a company with a meaningful product, with the personal goal of becoming a vital piece for your success.
+        </div>
+        <!-- help with text: Meike -->
+        <div id="contact-button-wrapper">
+            <button id="toggle-contact" type="button" onclick="toggleShowAbout()">Cancel</button>
+            <button id="toggle-contact" type="button" onclick="toggleShowContact()">Contact</button>
+        </div>
+    </div>
+    <img id="me-image" src="/content/background-pictures/me-cropped.jpeg" alt=""/>
+
+    <section id="techs">
+        <div class="header">TECHNOLOGIES</div>
+        <div id="tech-grid">
+            <div class="grid-item">
+                <img src="/content/tech-icons/js.png" alt="">
+                <div class="grid-name">JavaScript</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/react.png" alt="">
+                <div class="grid-name">React.js</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/redux.png" alt="">
+                <div class="grid-name">Redux.js</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/socket-io.svg" alt="">
+                <div class="grid-name">Socket-io</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/vue.png" alt="">
+                <div class="grid-name">Vue.js</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/postgresql.png" alt="">
+                <div class="grid-name" id="postgresql">PostgreSQL</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/node.png" alt="">
+                <div class="grid-name">Node.js</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/aws.webp" alt="">
+                <div class="grid-name">AWS<br><div id="amazon">Amazon Web Services</div></div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/jquery.png" alt="">
+                <div class="grid-name">jQuery</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/handlebars.png" alt="">
+                <div class="grid-name">Handebars</div>
+            </div>
+
+            <div class="grid-item">
+                <img src="/content/tech-icons/express.png" alt="">
+                <div class="grid-name">Express</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/git.png" alt="">
+                <div class="grid-name">Git</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/github.png" alt="">
+                <div class="grid-name">GitHub</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/heroku.png" alt="">
+                <div class="grid-name">Heroku</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/atom.png" alt="">
+                <div class="grid-name">Atom Editor</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/python.ico" alt="">
+                <div class="grid-name">Python.js<br><div id="amazon">:)</div></div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/npm.png" alt="">
+                <div class="grid-name">npm</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/postman.png" alt="">
+                <div class="grid-name">Postman</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/html.png" alt="">
+                <div class="grid-name">HTML5</div>
+            </div>
+            <div class="grid-item">
+                <img src="/content/tech-icons/css.png" alt="">
+                <div class="grid-name">CSS3</div>
+            </div>
+        </div>
+    </section>
+    <!-- <section id="techs">
+        <div class="header">TECHNOLOGIES</div>
+        <div id="tech-grid">
+            <div class="grid-item"><img src="/content/tech-icons/js.png" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/react.png" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/redux.png" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/socket-io.svg" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/vue.png" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/postgresql.png" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/node.png" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/aws.webp" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/jquery.png" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/handlebars.png" alt=""></div>
+
+            <div class="grid-item"><img src="/content/tech-icons/express.png" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/git.png" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/github.png" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/heroku.png" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/atom.png" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/python.ico" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/npm.png" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/postman.png" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/html.png" alt=""></div>
+            <div class="grid-item"><img src="/content/tech-icons/css.png" alt=""></div>
+        </div>
+        <div id="tech-grid">
+            <div class="grid-item">JavaScript</div>
+            <div class="grid-item">React.js</div>
+            <div class="grid-item">Redux.js</div>
+            <div class="grid-item">Socket-io</div>
+            <div class="grid-item">Vue.js</div>
+            <div class="grid-item" id="postgresql">PostgreSQL</div>
+            <div class="grid-item">Node.js</div>
+            <div class="grid-item">AWS<br><div id="amazon">Amazon Web Services</div></div>
+            <div class="grid-item">jQuery</div>
+            <div class="grid-item">Handebars</div>
+            <div class="grid-item">Express</div>
+            <div class="grid-item">Git</div>
+            <div class="grid-item">GitHub</div>
+            <div class="grid-item">Heroku</div>
+            <div class="grid-item">Atom Editor</div>
+            <div class="grid-item">Python.js<br><div id="amazon">:)</div></div>
+            <div class="grid-item">npm</div>
+            <div class="grid-item">Postman</div>
+            <div class="grid-item">HTML5</div>
+            <div class="grid-item">CSS3</div>
+        </div>
+    </section> -->
+    <section id="portfolio-title">
+        <div class="header" id="portfolio-header">PORTFOLIO</div>
+        <div class="project-name">
+            <i id="co-living-up" class="fas fa-angle-up deploy-up"></i>
+            <i id="co-living-down" class="fas fa-angle-down deploy-down"></i>
+            <i id="co-living-x" class="fas fa-times"></i>
+            <div id="co-living-i" class="more-button"><i class="fas fa-info"></i></div>
+            Co-living
+        </div>
+        <div id="co-living-p" class="project-info">
+            Automatic hostel managment built with React and Redux<br>
+            <div class="p-block">
+                <div class="features-header">Features include:</div>
+                <div class="features-list">
+                    Login/Registration | chose hostel/location | Make/manage reservations | Create/attend events | Hostel global chat | Edit profile | Upload profile picture | Self-check in/out | See other guests | Other people’s profiles | Request/accept/delete connections
+                </div>
+            </div>
+            <br>
+            <div>
+                <div class="features-header">Technologies:</div>
+                <div class="features-list">
+                    Javascript ES6 | React | Redux | Socket.io| Node.js | Express.js | PostgreSQL | HTML/CSS
+                </div>
+            </div>
+        </div>
+        <div class="carousel-wrapper">
+            <div class="kitties" id="kitties-1">
+                <div class="project1kitty kitty onscreen"><img id="kit1" src="/content/co-living/Screen Shot 2018-08-28 at 11.43.37.png" alt="image1"></div>
+                <div class="project1kitty kitty"><img id="kit2" src="/content/co-living/Screen Shot 2018-08-28 at 11.44.04.png" alt="image2"></div>
+                <div class="project1kitty kitty"><img id="kit3" src="/content/co-living/Screen Shot 2018-08-28 at 11.45.30.png" alt="image3"></div>
+                <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 11.45.54.png" alt="image4"></div>
+                <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 11.46.20.png" alt="image5"></div>
+                <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-14 at 16.01.06.png" alt="image6"></div>
+                <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 11.47.44.png" alt="image7"></div>
+                <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 11.48.19.png" alt="image8"></div>
+                <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 11.49.58.png" alt="image9"></div>
+                <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 11.50.13.png" alt="image10"></div>
+                <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 11.50.28.png" alt="image11"></div>
+                <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 12.01.35.png" alt="image12"></div>
+                <div class="project1kitty kitty"><img id="kit4" src="/content/co-living/Screen Shot 2018-08-28 at 12.02.50.png" alt="image13"></div>
+                <div id="dots">
+                    <div class="project1dot dot active"></div>
+                    <div class="project1dot dot"></div>
+                    <div class="project1dot dot"></div>
+                    <div class="project1dot dot"></div>
+                    <div class="project1dot dot"></div>
+                    <div class="project1dot dot"></div>
+                    <div class="project1dot dot"></div>
+                    <div class="project1dot dot"></div>
+                    <div class="project1dot dot"></div>
+                    <div class="project1dot dot"></div>
+                    <div class="project1dot dot"></div>
+                    <div class="project1dot dot"></div>
+                    <div class="project1dot dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="social-network">
+        <div class="project-name">
+            <i id="social-network-up" class="fas fa-angle-up deploy-up"></i>
+            <i id="social-network-down" class="fas fa-angle-down deploy-down"></i>
+            <i id="social-network-x" class="fas fa-times"></i>
+            <div id="social-network-i" class="more-button"><i class="fas fa-info"></i></div>
+            Social Network
+        </div>
+        <div id="social-network-p" class="project-info">
+            A simple social network app built with React.js and themed after my (side project) company logo: Flanet.<br>
+            <div class="p-block">
+                <div class="features-header">Features include:</div>
+                <div class="features-list">
+                    Login/Registration | Upload profile pic | Publish profile text | Make/Accept/Delete friend requests | List of all users | List of online users | General chat with all users
+                </div>
+            </div>
+            <br>
+            <div>
+                <div class="features-header">Technologies:</div>
+                <div class="features-list">
+                    Javascript ES6/ES7 | React | Redux | Node.js | Express.js | Socket.io | PostgreSQL | HTML/CSS
+                </div>
+            </div>
+        </div>
+        <div class="kitties" id="kitties-2">
+            <div class="project2kitty kitty onscreen"><img id="kit1" src="/content/social-network/Screen Shot 2018-08-28 at 17.20.16.png" alt="image1"></div>
+            <div class="project2kitty kitty"><img id="kit2" src="/content/social-network/Screen Shot 2018-08-28 at 17.21.14.png" alt="image2"></div>
+            <div class="project2kitty kitty"><img id="kit3" src="/content/social-network/Screen Shot 2018-08-28 at 17.29.50.png" alt="image3"></div>
+            <div class="project2kitty kitty"><img id="kit4" src="/content/social-network/Screen Shot 2018-08-28 at 17.30.05.png" alt="image4"></div>
+            <div class="project2kitty kitty"><img id="kit4" src="/content/social-network/Screen Shot 2018-08-28 at 17.31.33.png" alt="image5"></div>
+            <div class="project2kitty kitty"><img id="kit4" src="/content/social-network/Screen Shot 2018-08-28 at 17.33.25.png" alt="image6"></div>
             <div id="dots">
-                <div class="project1dot dot active"></div>
-                <div class="project1dot dot"></div>
-                <div class="project1dot dot"></div>
-                <div class="project1dot dot"></div>
-                <div class="project1dot dot"></div>
-                <div class="project1dot dot"></div>
-                <div class="project1dot dot"></div>
-                <div class="project1dot dot"></div>
-                <div class="project1dot dot"></div>
-                <div class="project1dot dot"></div>
-                <div class="project1dot dot"></div>
-                <div class="project1dot dot"></div>
-                <div class="project1dot dot"></div>
+                <div class="project2dot dot active"></div>
+                <div class="project2dot dot"></div>
+                <div class="project2dot dot"></div>
+                <div class="project2dot dot"></div>
+                <div class="project2dot dot"></div>
+                <div class="project2dot dot"></div>
             </div>
         </div>
-    </div>
-</section>
-<section id="social-network">
-    <div class="project-name">
-        <i id="social-network-up" class="fas fa-angle-up deploy-up"></i>
-        <i id="social-network-down" class="fas fa-angle-down deploy-down"></i>
-        <i id="social-network-x" class="fas fa-times"></i>
-        <div id="social-network-i" class="more-button"><i class="fas fa-info"></i></div>
-        Social Network
-    </div>
-    <div id="social-network-p" class="project-info">
-        A simple social network app built with React.js and themed after my (side project) company logo: Flanet.<br>
-        <div class="p-block">
-            <div class="features-header">Features include:</div>
-            <div class="features-list">
-                Login/Registration | Upload profile pic | Publish profile text | Make/Accept/Delete friend requests | List of all users | List of online users | General chat with all users
+    </section>
+    <section id="petition">
+        <div class="project-name">
+            <i id="petition-up" class="fas fa-angle-up deploy-up"></i>
+            <i id="petition-down" class="fas fa-angle-down deploy-down"></i>
+            <i id="petition-x" class="fas fa-times"></i>
+            <div id="petition-i" class="more-button"><i class="fas fa-info"></i></div>
+            <a class="app-link" href="https://sergio-petition.herokuapp.com/" target="_blank">Petition</a>
+        </div>
+        <div id="petition-p" class="project-info">
+            A web app to collect signatures and fight for a just cause.<br>
+            <div class="p-block">
+                <div class="features-header">Features include:</div>
+                <div class="features-list">
+                    Login/Registration | Electronic signature (mouse) | Edit profile | See all signers | See signers by city
+                </div>
+            </div>
+            <br>
+            <div>
+                <div class="features-header">Technologies:</div>
+                <div class="features-list">
+                    Javascript | jQuery | Handlebars.js | Node.js | Express.js | PostgreSQL | HTML/CSS
+                </div>
             </div>
         </div>
-        <br>
-        <div>
-            <div class="features-header">Technologies:</div>
-            <div class="features-list">
-                Javascript ES6/ES7 | React | Redux | Node.js | Express.js | Socket.io | PostgreSQL | HTML/CSS
+        <div class="kitties" id="kitties-3">
+            <div class="project3kitty kitty onscreen"><img id="kit1" src="/content/petition/Screen Shot 2018-09-02 at 10.29.46.png" alt="image1"></div>
+            <div class="project3kitty kitty"><img id="kit2" src="/content/petition/Screen Shot 2018-09-02 at 10.30.37.png" alt="image2"></div>
+            <div class="project3kitty kitty"><img id="kit3" src="/content/petition/Screen Shot 2018-09-02 at 10.31.28.png" alt="image3"></div>
+            <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.31.57.png" alt="image4"></div>
+            <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.32.29.png" alt="image5"></div>
+            <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.33.22.png" alt="image6"></div>
+            <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.33.40.png" alt="image7"></div>
+            <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.34.04.png" alt="image8"></div>
+            <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.34.23.png" alt="image9"></div>
+            <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.34.43.png" alt="image10"></div>
+            <div id="dots">
+                <div class="project3dot dot active"></div>
+                <div class="project3dot dot"></div>
+                <div class="project3dot dot"></div>
+                <div class="project3dot dot"></div>
+                <div class="project3dot dot"></div>
+                <div class="project3dot dot"></div>
+                <div class="project3dot dot"></div>
+                <div class="project3dot dot"></div>
+                <div class="project3dot dot"></div>
+                <div class="project3dot dot"></div>
             </div>
         </div>
-    </div>
-    <div class="kitties" id="kitties-2">
-        <div class="project2kitty kitty onscreen"><img id="kit1" src="/content/social-network/Screen Shot 2018-08-28 at 17.20.16.png" alt="image1"></div>
-        <div class="project2kitty kitty"><img id="kit2" src="/content/social-network/Screen Shot 2018-08-28 at 17.21.14.png" alt="image2"></div>
-        <div class="project2kitty kitty"><img id="kit3" src="/content/social-network/Screen Shot 2018-08-28 at 17.29.50.png" alt="image3"></div>
-        <div class="project2kitty kitty"><img id="kit4" src="/content/social-network/Screen Shot 2018-08-28 at 17.30.05.png" alt="image4"></div>
-        <div class="project2kitty kitty"><img id="kit4" src="/content/social-network/Screen Shot 2018-08-28 at 17.31.33.png" alt="image5"></div>
-        <div class="project2kitty kitty"><img id="kit4" src="/content/social-network/Screen Shot 2018-08-28 at 17.33.25.png" alt="image6"></div>
-        <div id="dots">
-            <div class="project2dot dot active"></div>
-            <div class="project2dot dot"></div>
-            <div class="project2dot dot"></div>
-            <div class="project2dot dot"></div>
-            <div class="project2dot dot"></div>
-            <div class="project2dot dot"></div>
+    </section>
+    <section id="image-board">
+        <div class="project-name">
+            <i id="image-board-up" class="fas fa-angle-up deploy-up"></i>
+            <i id="image-board-down" class="fas fa-angle-down deploy-down"></i>
+            <i id="image-board-x" class="fas fa-times"></i>
+            <div id="image-board-i" class="more-button"><i class="fas fa-info"></i></div>
+            Image Board
         </div>
-    </div>
-</section>
-<section id="petition">
-    <div class="project-name">
-        <i id="petition-up" class="fas fa-angle-up deploy-up"></i>
-        <i id="petition-down" class="fas fa-angle-down deploy-down"></i>
-        <i id="petition-x" class="fas fa-times"></i>
-        <div id="petition-i" class="more-button"><i class="fas fa-info"></i></div>
-        <a class="app-link" href="https://sergio-petition.herokuapp.com/" target="_blank">Petition</a>
-    </div>
-    <div id="petition-p" class="project-info">
-        A web app to collect signatures and fight for a just cause.<br>
-        <div class="p-block">
-            <div class="features-header">Features include:</div>
-            <div class="features-list">
-                Login/Registration | Electronic signature (mouse) | Edit profile | See all signers | See signers by city
+        <div id="image-board-p" class="project-info">
+            A single page image board like Instagram built with Vue.js.<br>
+            <div class="p-block">
+                <div class="features-header">Features include:</div>
+                <div class="features-list">
+                    Display of all uploaded images | Image upload | Image modals with comment function | Navigate through images with hashrouter | Delete comments/pictures
+                </div>
+            </div>
+            <br>
+            <div>
+                <div class="features-header">Technologies:</div>
+                <div class="features-list">
+                    Javascript ES6 | Vue.js | Node.js | Express.js | PostgreSQL | HTML/CSS
+                </div>
             </div>
         </div>
-        <br>
-        <div>
-            <div class="features-header">Technologies:</div>
-            <div class="features-list">
-                Javascript | jQuery | Handlebars.js | Node.js | Express.js | PostgreSQL | HTML/CSS
+        <div class="kitties" id="kitties-4">
+            <div class="project4kitty kitty onscreen"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.36.32.png" alt="image1"></div>
+            <div class="project4kitty kitty"><img id="kit1" src="/content/image-board/Screen Shot 2018-09-02 at 18.18.06.png" alt="image2"></div>
+            <div class="project4kitty kitty"><img id="kit3" src="/content/image-board/Screen Shot 2018-09-02 at 16.28.44.png" alt="image3"></div>
+            <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.29.05.png" alt="image4"></div>
+            <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.29.24.png" alt="image5"></div>
+            <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.30.08.png" alt="image6"></div>
+            <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.30.24.png" alt="image7"></div>
+            <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.37.17.png" alt="image8"></div>
+            <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.37.31.png" alt="image9"></div>
+            <div id="dots">
+                <div class="project4dot dot active" id="dark-dot"></div>
+                <div class="project4dot dot" id="dark-dot"></div>
+                <div class="project4dot dot" id="dark-dot"></div>
+                <div class="project4dot dot" id="dark-dot"></div>
+                <div class="project4dot dot" id="dark-dot"></div>
+                <div class="project4dot dot" id="dark-dot"></div>
+                <div class="project4dot dot" id="dark-dot"></div>
+                <div class="project4dot dot" id="dark-dot"></div>
+                <div class="project4dot dot" id="dark-dot"></div>
             </div>
         </div>
-    </div>
-    <div class="kitties" id="kitties-3">
-        <div class="project3kitty kitty onscreen"><img id="kit1" src="/content/petition/Screen Shot 2018-09-02 at 10.29.46.png" alt="image1"></div>
-        <div class="project3kitty kitty"><img id="kit2" src="/content/petition/Screen Shot 2018-09-02 at 10.30.37.png" alt="image2"></div>
-        <div class="project3kitty kitty"><img id="kit3" src="/content/petition/Screen Shot 2018-09-02 at 10.31.28.png" alt="image3"></div>
-        <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.31.57.png" alt="image4"></div>
-        <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.32.29.png" alt="image5"></div>
-        <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.33.22.png" alt="image6"></div>
-        <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.33.40.png" alt="image7"></div>
-        <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.34.04.png" alt="image8"></div>
-        <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.34.23.png" alt="image9"></div>
-        <div class="project3kitty kitty"><img id="kit4" src="/content/petition/Screen Shot 2018-09-02 at 10.34.43.png" alt="image10"></div>
-        <div id="dots">
-            <div class="project3dot dot active"></div>
-            <div class="project3dot dot"></div>
-            <div class="project3dot dot"></div>
-            <div class="project3dot dot"></div>
-            <div class="project3dot dot"></div>
-            <div class="project3dot dot"></div>
-            <div class="project3dot dot"></div>
-            <div class="project3dot dot"></div>
-            <div class="project3dot dot"></div>
-            <div class="project3dot dot"></div>
-        </div>
-    </div>
-</section>
-<section id="image-board">
-    <div class="project-name">
-        <i id="image-board-up" class="fas fa-angle-up deploy-up"></i>
-        <i id="image-board-down" class="fas fa-angle-down deploy-down"></i>
-        <i id="image-board-x" class="fas fa-times"></i>
-        <div id="image-board-i" class="more-button"><i class="fas fa-info"></i></div>
-        Image Board
-    </div>
-    <div id="image-board-p" class="project-info">
-        A single page image board like Instagram built with Vue.js.<br>
-        <div class="p-block">
-            <div class="features-header">Features include:</div>
-            <div class="features-list">
-                Display of all uploaded images | Image upload | Image modals with comment function | Navigate through images with hashrouter | Delete comments/pictures
-            </div>
-        </div>
-        <br>
-        <div>
-            <div class="features-header">Technologies:</div>
-            <div class="features-list">
-                 Javascript ES6 | Vue.js | Node.js | Express.js | PostgreSQL | HTML/CSS
-            </div>
-        </div>
-    </div>
-    <div class="kitties" id="kitties-4">
-        <div class="project4kitty kitty onscreen"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.36.32.png" alt="image1"></div>
-        <div class="project4kitty kitty"><img id="kit1" src="/content/image-board/Screen Shot 2018-09-02 at 18.18.06.png" alt="image2"></div>
-        <div class="project4kitty kitty"><img id="kit3" src="/content/image-board/Screen Shot 2018-09-02 at 16.28.44.png" alt="image3"></div>
-        <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.29.05.png" alt="image4"></div>
-        <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.29.24.png" alt="image5"></div>
-        <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.30.08.png" alt="image6"></div>
-        <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.30.24.png" alt="image7"></div>
-        <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.37.17.png" alt="image8"></div>
-        <div class="project4kitty kitty"><img id="kit4" src="/content/image-board/Screen Shot 2018-09-02 at 16.37.31.png" alt="image9"></div>
-        <div id="dots">
-            <div class="project4dot dot active" id="dark-dot"></div>
-            <div class="project4dot dot" id="dark-dot"></div>
-            <div class="project4dot dot" id="dark-dot"></div>
-            <div class="project4dot dot" id="dark-dot"></div>
-            <div class="project4dot dot" id="dark-dot"></div>
-            <div class="project4dot dot" id="dark-dot"></div>
-            <div class="project4dot dot" id="dark-dot"></div>
-            <div class="project4dot dot" id="dark-dot"></div>
-            <div class="project4dot dot" id="dark-dot"></div>
-        </div>
-    </div>
-</section>
-<footer onclick="scroll_top()"><i id="footer-arrow" class="fas fa-angle-double-up"></i></footer>
+    </section>
+    <footer onclick="scroll_top()"><i id="footer-arrow" class="fas fa-angle-double-up"></i></footer>
+</div>
