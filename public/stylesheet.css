@@ -458,44 +458,6 @@ section{
 section:nth-last-of-type(odd){
     background-color: white;
 }
-@media screen and (max-width: 585px){
-    #mail{
-        top: 210px;
-        width: 100vw;
-    }
-    #message-modal{
-        top: 210px;
-        width: 100vw;
-    }
-    #me-image{
-        top: 210px;
-    }
-    #mail form{
-        margin-top: 260px;
-        /* bottom: 0; */
-        width: 100%;
-    }
-    section{
-        top: 210px;
-    }
-    #about{
-        top: 210px;
-        width: 100vw;
-    }
-    #berlin-sign{
-        top: 800px;
-    }
-    #contact-form-title{
-        text-align: left;
-    }
-    #message{
-        top: 70%;
-        width: 100%;
-        text-align: center;
-        padding-left: 0;
-        padding: 5px;
-    }
-}
 @media screen and (max-width: 334px){
     #mail form{
         margin-top: 360px;
@@ -765,6 +727,7 @@ section:nth-last-of-type(odd){
 }
 /* //////////////// FOOTER //////////////////// */
 footer{
+    position: relative;
     background-color: #7c304f;
     cursor: pointer;
     height: 50px;
@@ -777,4 +740,45 @@ footer:hover{
 #footer-arrow{
     color: white;
     font-size: 30px;
+}
+@media screen and (max-width: 585px){
+    #mail{
+        top: 210px;
+        width: 100vw;
+    }
+    #message-modal{
+        top: 210px;
+        width: 100vw;
+    }
+    #me-image{
+        top: 210px;
+    }
+    #mail form{
+        margin-top: 260px;
+        /* bottom: 0; */
+        width: 100%;
+    }
+    section{
+        top: 210px;
+    }
+    #about{
+        top: 210px;
+        width: 100vw;
+    }
+    #berlin-sign{
+        top: 800px;
+    }
+    #contact-form-title{
+        text-align: left;
+    }
+    #message{
+        top: 70%;
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        padding: 5px;
+    }
+    footer{
+        top: 210px;
+    }
 }
