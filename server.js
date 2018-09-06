@@ -19,7 +19,7 @@ if (process.env.NODE_ENV == 'production') {
 } else {
     secrets = require('./secrets.json')
 }
-console.log(__dirname + "/public/content/favicon.ico");
+// console.log(__dirname + "/public/content/favicon.ico");
 app.use(favicon(__dirname + "/public/content/favicon.ico"))
 
 app.use(session({
@@ -110,7 +110,7 @@ app.post("/mail", (req, res) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return console.log(error);
+            return console.log("Send mail error: ", error);
         }
         console.log("Message sent: %s", info.messageId);
         console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));

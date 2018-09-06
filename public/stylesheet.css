@@ -37,6 +37,13 @@ body{
     display: block;
     /* background-color: green; */
 }
+@media screen and (max-width: 535px){
+    #header-box{
+        width: 100vw;
+        text-align: center;
+        right: 0;
+    }
+}
 #name{
     /* color: #3F88C5; */
     color: #7c304f;
@@ -155,6 +162,7 @@ body{
 #mail form{
     position: relative;
     margin-top: 220px;
+    /* bottom: 0; */
     padding: 30px;
     font-weight: 400;
 }
@@ -190,6 +198,33 @@ textarea{
     resize: none;
     width: 100%;
 }
+@media screen and (min-width: 585px) and (max-width: 845px){
+    #mail form{
+        margin-top: 360px;
+        /* width: 50%; */
+    }
+    textarea{
+        height: 100px;
+    }
+    #message{
+        top: 70%;
+    }
+}
+@media screen and (min-width: 585px) and (max-width: 644px){
+    #mail form{
+        margin-top: 360px;
+        width: 50%;
+    }
+    #contact-form-title{
+        text-align: left;
+    }
+    textarea{
+        height: 100px;
+    }
+    #message{
+        top: 80%;
+    }
+}
 .mail-input{
     text-align: center;
     width: 100%;
@@ -219,6 +254,25 @@ textarea{
 #cancel-mail-button:hover{
     background-color: rgba(255, 255, 255, 1);
 }
+#about{
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    height: 719px;
+    /* object-fit: cover;
+    object-position: bottom; */
+    background-color: rgb(0, 0, 0, 0.7);
+    display: none;
+    /* border: 1px solid blue; */
+}
+#about-paragraph{
+    position: absolute;
+    padding: 30px;
+    bottom: 60px;
+    color: white;
+    font-size: 20px;
+}
 @media screen and (min-width: 1400px) and (max-width: 1432px){
     #contact-form-title{
         font-size: 35px;
@@ -246,28 +300,19 @@ textarea{
         font-size: 16px;
     }
 }
-#about{
-    position: absolute;
-    z-index: 3;
-    left: 0;
-    top: 0;
-    height: 719px;
-    object-fit: cover;
-    object-position: bottom;
-    background-color: rgb(0, 0, 0, 0.7);
-    display: none;
-    /* border: 1px solid blue; */
-}
-#about-paragraph{
-    position: absolute;
-    padding: 30px;
-    bottom: 60px;
-    color: white;
-    font-size: 20px;
-}
 @media screen and (min-width: 1378px) and (max-width: 1489px){
     #about-paragraph {
         font-size: 16px;
+    }
+}
+@media screen and (min-width: 882px) and (max-width: 1042px){
+    #about-paragraph {
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 739px) and (max-width: 882px){
+    #about-paragraph {
+        font-size: 14px;
     }
 }
 #contact-button-wrapper{
@@ -284,6 +329,29 @@ textarea{
 }
 #toggle-contact:hover{
     background-color: rgba(255, 255, 255, 1);
+}
+@media screen and (max-width: 739px){
+    #about{
+        position: relative;
+        margin-top: -4px;
+        width: 100vw;
+        /* background-color: red; */
+        height: auto;
+        padding-bottom: 20px;
+    }
+    #about-paragraph{
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        font-size: 18px;
+        bottom: 0;
+        /* background-color: green; */
+    }
+    #contact-button-wrapper{
+        position: relative;
+        bottom: 0;
+        text-align: center;
+    }
 }
 @media screen and (min-width: 1378px) and (max-width: 1420px){
     #toggle-contact{
@@ -311,13 +379,26 @@ textarea{
     font-weight: 400;
     color: #7c304f;
     /* background-color: blue; */
-    margin-left: 55px;
-    display: inline-block;
+    text-align: left;
+    margin-left: 35px;
     margin-bottom: 8px;
 }
 #portfolio-header{
+    display: inline-block;
     position: absolute;
-    left: 0;
+    left: 20px;
+}
+@media screen and (max-width: 430px){
+    .header{
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+    #portfolio-header{
+        display: block;
+        position: relative;
+        left: 0;
+    }
 }
 #tech-grid{
     width: 100%;
@@ -377,6 +458,11 @@ textarea{
     padding-left: 20px;
     padding-right: 20px;
 }
+@media screen and (max-width: 670px){
+    #co-living{
+        top: 70px;
+    }
+}
 section{
     position: relative;
     text-align: right;
@@ -388,6 +474,56 @@ section{
 }
 section:nth-last-of-type(odd){
     background-color: white;
+}
+@media screen and (max-width: 585px){
+    #mail{
+        top: 210px;
+        width: 100vw;
+    }
+    #message-modal{
+        top: 210px;
+        width: 100vw;
+    }
+    #me-image{
+        top: 210px;
+    }
+    #mail form{
+        margin-top: 260px;
+        /* bottom: 0; */
+        width: 100%;
+    }
+    section{
+        top: 210px;
+    }
+    #about{
+        top: 210px;
+        width: 100vw;
+    }
+    #berlin-sign{
+        top: 800px;
+    }
+    #contact-form-title{
+        text-align: left;
+    }
+    #message{
+        top: 70%;
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        padding: 5px;
+    }
+}
+@media screen and (max-width: 334px){
+    #mail form{
+        margin-top: 360px;
+    }
+    #contact-form-title{
+        font-size: 30px;
+        top: 7px;
+    }
+    textarea{
+        height: 100px;
+    }
 }
 .project-name{
     font-size: 60px;
@@ -463,6 +599,11 @@ section:nth-last-of-type(odd){
     left: -65px;
     font-size: 70px;
     font-weight: 400;
+}
+@media screen and (min-width: 585px) and (max-width: 824px){
+    #berlin-sign{
+        top: 590px;
+    }
 }
 .project-info{
     left: 50%;

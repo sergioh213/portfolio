@@ -5,6 +5,39 @@ function scroll_top() {
     window.scrollBy(0, -99999);
 }
 
+var submitButton = document.getElementById('send-mail-button')
+submitButton.addEventListener("click", function(e){
+    e.preventDefault()
+    axios.post("/mail", {
+        name: document.querySelector("input[name=name]").value,
+        company: document.querySelector("input[name=company]").value,
+        email: document.querySelector("input[name=email]").value,
+        phone: document.querySelector("input[name=phone]").value,
+        message: document.querySelector("textarea[name=message]").value
+    }).then(function(resp){
+        console.log("message sent");
+        var mailModal = document.getElementById("mail")
+        mailModal.style.display = "none"
+        if (resp.data.success) {
+            console.log("response received succesfully");
+            var messageModal = document.getElementById('message-modal')
+            console.log("messageModal: ", messageModal);
+            messageModal.style.display = "block"
+            document.querySelector("input[name=name]").value = null
+            document.querySelector("input[name=company]").value = null
+            document.querySelector("input[name=email]").value = null
+            document.querySelector("input[name=phone]").value = null
+            document.querySelector("textarea[name=message]").value = null
+            setTimeout(function(){
+                messageModal.style.display = "none"
+                resp.data.success = false
+            }, 2000)
+        } else {
+            console.log("Something went wrong with the email");
+        }
+    })
+})
+
 setTimeout(function(){
     var me = document.getElementById("me-image").clientWidth
     console.log("document.getElementById('me-image')  ", document.getElementById("me-image"));
@@ -52,34 +85,26 @@ setTimeout(function(){
     if (document.body.clientWidth <= 1128) {
         mailModal.style.left = 0 + "px"
         aboutModal.style.left = 0 + "px"
-        message.style.width = 0 + "px"
+        message.style.left = 0 + "px"
+        // message.style.top = 70 + "%"
+    }
+    if (document.body.clientWidth <= 585) {
+        ///////// mail ///////
+        mailModal.style.left = null
+        mailModal.style.right = null
+        mailModal.style.width = null
+        form.style.width = null
+        ///////// about me ///////
+        aboutModal.style.left = null
+        aboutModal.style.right = null
+        aboutModal.style.width = null
+        paragraph.style.width = null
+        ///////// message ///////
+        message.style.left = null
+        message.style.top = null
+        message.style.width = null
     }
 }, 100)
-
-var submitButton = document.getElementById('send-mail-button')
-submitButton.addEventListener("click", function(e){
-    e.preventDefault()
-    axios.post("/mail", {
-        name: document.querySelector("input[name=name]").value,
-        company: document.querySelector("input[name=company]").value,
-        email: document.querySelector("input[name=email]").value,
-        phone: document.querySelector("input[name=phone]").value,
-        message: document.querySelector("textarea[name=message]").value
-    }).then(function(resp){
-        var mailModal = document.getElementById("mail")
-        mailModal.style.display = "none"
-        if (resp.data.success) {
-            resp.data.message
-            var messageModal = document.getElementById('message-modal')
-            messageModal.style.display = "block"
-            setTimeout(function(){
-                messageModal.style.display = "none"
-            }, 2000)
-        } else {
-            console.log("Something went wrong with the email");
-        }
-    })
-})
 
 function screenResize() {
     var me = document.getElementById("me-image").clientWidth
@@ -120,16 +145,27 @@ function screenResize() {
         message.style.right = null
         message.style.width = modalWidth + "px"
     }
-    if (document.body.clientWidth <= 1489) {
-        if (document.body.clientWidth <= 1378) {
-            console.log("exited text reduction width");
-        } else {
-            console.log("entered text reduction width");
-        }
-    }
     if (document.body.clientWidth <= 1128) {
         mailModal.style.left = 0 + "px"
         aboutModal.style.left = 0 + "px"
+        message.style.left = 0 + "px"
+        // message.style.top = 70 + "%"
+    }
+    if (document.body.clientWidth <= 585) {
+        ///////// mail ///////
+        mailModal.style.left = null
+        mailModal.style.right = null
+        mailModal.style.width = null
+        form.style.width = null
+        ///////// about me ///////
+        aboutModal.style.left = null
+        aboutModal.style.right = null
+        aboutModal.style.width = null
+        paragraph.style.width = null
+        ///////// message ///////
+        message.style.left = null
+        message.style.top = null
+        message.style.width = null
     }
 }
 

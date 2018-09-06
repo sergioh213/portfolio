@@ -44,18 +44,18 @@
                 Contact Form
             </div>
             <div class="mail-input" id="mail-name">
-                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="name" placeholder="Name" value="test name">
             </div>
             <div class="mail-input" id="mail-company">
-                <input type="text" name="company" placeholder="Company">
+                <input type="text" name="company" placeholder="Company" value="test company">
             </div>
             <div class="mail-input" id="mail-email">
-                <input type="email" name="email" placeholder='Email' required>
+                <input type="email" name="email" placeholder='Email' required value="test@test">
             </div>
             <div class="mail-input" id="mail-phone">
-                <input type="text" name="phone" placeholder="Phone">
+                <input type="text" name="phone" placeholder="Phone" value="+00dsf6442">
             </div>
-            <textarea name="message" rows="8" cols="80" placeholder='Message' required></textarea>
+            <textarea name="message" rows="8" cols="80" placeholder='Message' required value="test message"></textarea>
             <input name="_csrf" type="hidden" value="{{ csrfToken }}">
             <div class="mail-input" id="mail-phone">
                 <button id="cancel-mail-button" type="button" onclick="toggleShowContact()">Cancel</button>
@@ -80,7 +80,7 @@
     <img id="me-image" src="/content/background-pictures/me-cropped.jpeg" alt=""/>
 
     <section id="techs">
-        <div class="header">TECHNOLOGIES</div>
+        <div class="header" id="techs-header">TECHNOLOGIES</div>
         <div id="tech-grid">
             <div class="grid-item">
                 <img src="/content/tech-icons/js.png" alt="">
@@ -165,57 +165,9 @@
             </div>
         </div>
     </section>
-    <!-- <section id="techs">
-        <div class="header">TECHNOLOGIES</div>
-        <div id="tech-grid">
-            <div class="grid-item"><img src="/content/tech-icons/js.png" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/react.png" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/redux.png" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/socket-io.svg" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/vue.png" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/postgresql.png" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/node.png" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/aws.webp" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/jquery.png" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/handlebars.png" alt=""></div>
-
-            <div class="grid-item"><img src="/content/tech-icons/express.png" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/git.png" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/github.png" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/heroku.png" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/atom.png" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/python.ico" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/npm.png" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/postman.png" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/html.png" alt=""></div>
-            <div class="grid-item"><img src="/content/tech-icons/css.png" alt=""></div>
-        </div>
-        <div id="tech-grid">
-            <div class="grid-item">JavaScript</div>
-            <div class="grid-item">React.js</div>
-            <div class="grid-item">Redux.js</div>
-            <div class="grid-item">Socket-io</div>
-            <div class="grid-item">Vue.js</div>
-            <div class="grid-item" id="postgresql">PostgreSQL</div>
-            <div class="grid-item">Node.js</div>
-            <div class="grid-item">AWS<br><div id="amazon">Amazon Web Services</div></div>
-            <div class="grid-item">jQuery</div>
-            <div class="grid-item">Handebars</div>
-            <div class="grid-item">Express</div>
-            <div class="grid-item">Git</div>
-            <div class="grid-item">GitHub</div>
-            <div class="grid-item">Heroku</div>
-            <div class="grid-item">Atom Editor</div>
-            <div class="grid-item">Python.js<br><div id="amazon">:)</div></div>
-            <div class="grid-item">npm</div>
-            <div class="grid-item">Postman</div>
-            <div class="grid-item">HTML5</div>
-            <div class="grid-item">CSS3</div>
-        </div>
-    </section> -->
     <section id="portfolio-title">
         <div class="header" id="portfolio-header">PORTFOLIO</div>
-        <div class="project-name">
+        <div class="project-name" id="co-living">
             <i id="co-living-up" class="fas fa-angle-up deploy-up"></i>
             <i id="co-living-down" class="fas fa-angle-down deploy-down"></i>
             <i id="co-living-x" class="fas fa-times"></i>
