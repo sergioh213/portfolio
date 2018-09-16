@@ -495,10 +495,165 @@ function project4() {
   timer = setTimeout(moveKitties, 6000)
 }
 
+function project5() {
+  var kitties = document.getElementsByClassName('project5kitty');
+  var dots = document.getElementsByClassName('project5dot');
+  var container = document.getElementById('kitties-5');
+  var timer;
+  var isTransitioning;
+  var current = 0;
+  var startX;
+  var startY;
+  var finishX;
+  var finishY;
+
+  function moveKitties(next) {
+    dots[current].classList.remove('active');
+    kitties[current].classList.remove('onscreen');
+    isTransitioning = true;
+    // console.log('The leaving one is ' + current);
+    kitties[current].classList.add('exit');
+
+    if (typeof next != 'undefined'){
+      current = next;
+    } else {
+      current++;
+    }
+    if (current >= kitties.length){
+      current = 0;
+    }
+    dots[current].classList.add('active');
+    // console.log('The one coming on screen is ' + current);
+    kitties[current].classList.add('onscreen');
+  }
+
+  container.addEventListener('transitionend', function(e){
+    if (e.target.classList.contains('exit')){
+      e.target.classList.remove('exit');
+      isTransitioning = false;
+      timer = setTimeout(moveKitties, 6000);
+    }
+  })
+
+  for (var i = 0; i < dots.length; i++){
+    dots[i].addEventListener('click', eventHandler(i));
+  }
+
+  function eventHandler(n){
+    return function(e){
+      if (e.target.classList.contains('active')){
+        return;
+      };
+      if (isTransitioning){
+        return;
+      }
+      clearTimeout(timer);
+      console.log(n)
+      moveKitties(n)
+    }
+  }
+
+  container.addEventListener("touchstart", function(e) {
+      startX = e.touches[0].pageX;
+      startY = e.touches[0].pageY;
+  });
+  container.addEventListener("touchend", function(e) {
+      finishX = e.changedTouches[0].pageX;
+      finishY = e.changedTouches[0].pageY;
+      console.log(finishX);
+      if (finishX < startX) {
+          if (isTransitioning == false) {
+            moveKitties();
+          }
+      }
+      clearTimeout(timer);
+  });
+  timer = setTimeout(moveKitties, 3700)
+}
+
+function project6() {
+  var kitties = document.getElementsByClassName('project6kitty');
+  var dots = document.getElementsByClassName('project6dot');
+  var container = document.getElementById('kitties-6');
+  var timer;
+  var isTransitioning;
+  var current = 0;
+  var startX;
+  var startY;
+  var finishX;
+  var finishY;
+
+  function moveKitties(next) {
+    dots[current].classList.remove('active');
+    kitties[current].classList.remove('onscreen');
+    isTransitioning = true;
+    // console.log('The leaving one is ' + current);
+    kitties[current].classList.add('exit');
+
+    if (typeof next != 'undefined'){
+      current = next;
+    } else {
+      current++;
+    }
+    if (current >= kitties.length){
+      current = 0;
+    }
+    dots[current].classList.add('active');
+    // console.log('The one coming on screen is ' + current);
+    kitties[current].classList.add('onscreen');
+  }
+
+  container.addEventListener('transitionend', function(e){
+    if (e.target.classList.contains('exit')){
+      e.target.classList.remove('exit');
+      isTransitioning = false;
+      timer = setTimeout(moveKitties, 6000);
+    }
+  })
+
+  for (var i = 0; i < dots.length; i++){
+    dots[i].addEventListener('click', eventHandler(i));
+  }
+
+  function eventHandler(n){
+    return function(e){
+      if (e.target.classList.contains('active')){
+        return;
+      };
+      if (isTransitioning){
+        return;
+      }
+      clearTimeout(timer);
+      console.log(n)
+      moveKitties(n)
+    }
+  }
+
+  container.addEventListener("touchstart", function(e) {
+      startX = e.touches[0].pageX;
+      startY = e.touches[0].pageY;
+  });
+  container.addEventListener("touchend", function(e) {
+      finishX = e.changedTouches[0].pageX;
+      finishY = e.changedTouches[0].pageY;
+      console.log(finishX);
+      if (finishX < startX) {
+          if (isTransitioning == false) {
+            moveKitties();
+          }
+      }
+      clearTimeout(timer);
+  });
+  timer = setTimeout(moveKitties, 6000)
+}
+
+
 project1()
 project2()
 project3()
 project4()
+project5()
+project6()
 
 var project1I = document.getElementById("co-living-i")
 var project1X = document.getElementById("co-living-x")
@@ -614,4 +769,62 @@ project4Up.addEventListener("click", function(){
     carrousel4.style.display = "none"
     project4Up.style.display = "none"
     project4Down.style.display = "inline-block"
+})
+
+var project5I = document.getElementById("the-food-market-i")
+var project5X = document.getElementById("the-food-market-x")
+var project5P = document.getElementById("the-food-market-p")
+var project5Down = document.getElementById("the-food-market-down")
+var project5Up = document.getElementById("the-food-market-up")
+var carrousel5 = document.getElementById("kitties-5")
+
+project5I.addEventListener("click", function(){
+    project5P.style.display = "block"
+    project5X.style.display = "inline"
+    project5I.style.display = "none"
+})
+project5X.addEventListener("click", function(){
+    project5P.style.display = "none"
+    project5X.style.display = "none"
+    project5I.style.display = "inline-block"
+})
+project5Down.addEventListener("click", function(){
+    carrousel5.style.display = "block"
+    project5Up.style.display = "inline-block"
+    project5Down.style.display = "none"
+    // project5()
+})
+project5Up.addEventListener("click", function(){
+    carrousel5.style.display = "none"
+    project5Up.style.display = "none"
+    project5Down.style.display = "inline-block"
+})
+
+var project6I = document.getElementById("three-js-i")
+var project6X = document.getElementById("three-js-x")
+var project6P = document.getElementById("three-js-p")
+var project6Down = document.getElementById("three-js-down")
+var project6Up = document.getElementById("three-js-up")
+var carrousel6 = document.getElementById("kitties-6")
+
+project6I.addEventListener("click", function(){
+    project6P.style.display = "block"
+    project6X.style.display = "inline"
+    project6I.style.display = "none"
+})
+project6X.addEventListener("click", function(){
+    project6P.style.display = "none"
+    project6X.style.display = "none"
+    project6I.style.display = "inline-block"
+})
+project6Down.addEventListener("click", function(){
+    carrousel6.style.display = "block"
+    project6Up.style.display = "inline-block"
+    project6Down.style.display = "none"
+    // project6()
+})
+project6Up.addEventListener("click", function(){
+    carrousel6.style.display = "none"
+    project6Up.style.display = "none"
+    project6Down.style.display = "inline-block"
 })
