@@ -5,6 +5,10 @@ function scroll_top() {
     window.scrollBy(0, -99999);
 }
 
+function renderHtml() {
+
+}
+
 var submitButton = document.getElementById('send-mail-button')
 submitButton.addEventListener("click", function(e){
     e.preventDefault()
