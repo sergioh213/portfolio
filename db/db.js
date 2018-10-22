@@ -149,7 +149,6 @@ exports.specificCity = function(cityInput) {
         ON signatures.user_id = users.id
         WHERE LOWER(city) = LOWER($1);
         `
-    console.log("city: ", params);
     return db.query(q, params)
         .then(results => {
             return results.rows

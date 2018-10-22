@@ -1,7 +1,6 @@
-console.log("sanity");
+// console.log("sanity");
 
 function scroll_top() {
-    console.log("scroll happening");
     window.scrollBy(0, -99999);
 }
 
@@ -15,13 +14,10 @@ submitButton.addEventListener("click", function(e){
         phone: document.querySelector("input[name=phone]").value,
         message: document.querySelector("textarea[name=message]").value
     }).then(function(resp){
-        console.log("message sent");
         var mailModal = document.getElementById("mail")
         mailModal.style.display = "none"
         if (resp.data.success) {
-            console.log("response received succesfully");
             var messageModal = document.getElementById('message-modal')
-            console.log("messageModal: ", messageModal);
             messageModal.style.display = "block"
             document.querySelector("input[name=name]").value = null
             document.querySelector("input[name=company]").value = null
@@ -33,18 +29,13 @@ submitButton.addEventListener("click", function(e){
                 resp.data.success = false
             }, 2000)
         } else {
-            console.log("Something went wrong with the email");
         }
     })
 })
 
 setTimeout(function(){
     var me = document.getElementById("me-image").clientWidth
-    console.log("document.getElementById('me-image')  ", document.getElementById("me-image"));
-    console.log("me picture width: ", me);
-    console.log("document.body.clientWidth: ", document.body.clientWidth);
     var modalWidth = document.body.clientWidth - me
-    console.log("modal width when mounting: ", modalWidth);
     var mailModal = document.getElementById("mail")
     var aboutModal = document.getElementById("about")
     var form = document.getElementById("mail-form")
@@ -66,7 +57,6 @@ setTimeout(function(){
         message.style.left = modalWidth + "px"
         message.style.right = 0 + "px"
     } else {
-        console.log("else statement, bigger that 250px;");
         ///////// mail ///////
         mailModal.style.left = 0 + "px"
         mailModal.style.right = null
@@ -242,21 +232,17 @@ function project1() {
         return;
       }
       clearTimeout(timer);
-      console.log(n)
       moveKitties(n)
     }
   }
 
   container.addEventListener("touchstart", function(e) {
-      console.log("touchstart");
       startX = e.touches[0].pageX;
       startY = e.touches[0].pageY;
   });
   container.addEventListener("touchend", function(e) {
-      console.log("touchend");
       finishX = e.changedTouches[0].pageX;
       finishY = e.changedTouches[0].pageY;
-      console.log(finishX);
       if (finishX < startX) {
           if (isTransitioning == false) {
             moveKitties();
@@ -283,7 +269,6 @@ function project2() {
     dots[current].classList.remove('active');
     kitties[current].classList.remove('onscreen');
     isTransitioning = true;
-    // console.log('The leaving one is ' + current);
     kitties[current].classList.add('exit');
 
     if (typeof next != 'undefined'){
@@ -295,7 +280,6 @@ function project2() {
       current = 0;
     }
     dots[current].classList.add('active');
-    // console.log('The one coming on screen is ' + current);
     kitties[current].classList.add('onscreen');
   }
 
@@ -320,7 +304,6 @@ function project2() {
         return;
       }
       clearTimeout(timer);
-      console.log(n)
       moveKitties(n)
     }
   }
@@ -332,7 +315,6 @@ function project2() {
   container.addEventListener("touchend", function(e) {
       finishX = e.changedTouches[0].pageX;
       finishY = e.changedTouches[0].pageY;
-      console.log(finishX);
       if (finishX < startX) {
           if (isTransitioning == false) {
             moveKitties();
@@ -359,7 +341,6 @@ function project3() {
     dots[current].classList.remove('active');
     kitties[current].classList.remove('onscreen');
     isTransitioning = true;
-    // console.log('The leaving one is ' + current);
     kitties[current].classList.add('exit');
 
     if (typeof next != 'undefined'){
@@ -371,7 +352,6 @@ function project3() {
       current = 0;
     }
     dots[current].classList.add('active');
-    // console.log('The one coming on screen is ' + current);
     kitties[current].classList.add('onscreen');
   }
 
@@ -396,7 +376,6 @@ function project3() {
         return;
       }
       clearTimeout(timer);
-      console.log(n)
       moveKitties(n)
     }
   }
@@ -408,7 +387,6 @@ function project3() {
   container.addEventListener("touchend", function(e) {
       finishX = e.changedTouches[0].pageX;
       finishY = e.changedTouches[0].pageY;
-      console.log(finishX);
       if (finishX < startX) {
           if (isTransitioning == false) {
             moveKitties();
@@ -435,7 +413,6 @@ function project4() {
     dots[current].classList.remove('active');
     kitties[current].classList.remove('onscreen');
     isTransitioning = true;
-    // console.log('The leaving one is ' + current);
     kitties[current].classList.add('exit');
 
     if (typeof next != 'undefined'){
@@ -447,7 +424,6 @@ function project4() {
       current = 0;
     }
     dots[current].classList.add('active');
-    // console.log('The one coming on screen is ' + current);
     kitties[current].classList.add('onscreen');
   }
 
@@ -472,7 +448,6 @@ function project4() {
         return;
       }
       clearTimeout(timer);
-      console.log(n)
       moveKitties(n)
     }
   }
@@ -484,7 +459,6 @@ function project4() {
   container.addEventListener("touchend", function(e) {
       finishX = e.changedTouches[0].pageX;
       finishY = e.changedTouches[0].pageY;
-      console.log(finishX);
       if (finishX < startX) {
           if (isTransitioning == false) {
             moveKitties();
@@ -511,7 +485,6 @@ function project5() {
     dots[current].classList.remove('active');
     kitties[current].classList.remove('onscreen');
     isTransitioning = true;
-    // console.log('The leaving one is ' + current);
     kitties[current].classList.add('exit');
 
     if (typeof next != 'undefined'){
@@ -523,7 +496,6 @@ function project5() {
       current = 0;
     }
     dots[current].classList.add('active');
-    // console.log('The one coming on screen is ' + current);
     kitties[current].classList.add('onscreen');
   }
 
@@ -548,7 +520,6 @@ function project5() {
         return;
       }
       clearTimeout(timer);
-      console.log(n)
       moveKitties(n)
     }
   }
@@ -560,7 +531,6 @@ function project5() {
   container.addEventListener("touchend", function(e) {
       finishX = e.changedTouches[0].pageX;
       finishY = e.changedTouches[0].pageY;
-      console.log(finishX);
       if (finishX < startX) {
           if (isTransitioning == false) {
             moveKitties();
@@ -587,7 +557,6 @@ function project6() {
     dots[current].classList.remove('active');
     kitties[current].classList.remove('onscreen');
     isTransitioning = true;
-    // console.log('The leaving one is ' + current);
     kitties[current].classList.add('exit');
 
     if (typeof next != 'undefined'){
@@ -599,7 +568,6 @@ function project6() {
       current = 0;
     }
     dots[current].classList.add('active');
-    // console.log('The one coming on screen is ' + current);
     kitties[current].classList.add('onscreen');
   }
 
@@ -624,7 +592,6 @@ function project6() {
         return;
       }
       clearTimeout(timer);
-      console.log(n)
       moveKitties(n)
     }
   }
@@ -636,7 +603,6 @@ function project6() {
   container.addEventListener("touchend", function(e) {
       finishX = e.changedTouches[0].pageX;
       finishY = e.changedTouches[0].pageY;
-      console.log(finishX);
       if (finishX < startX) {
           if (isTransitioning == false) {
             moveKitties();
